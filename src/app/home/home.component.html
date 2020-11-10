@@ -1,0 +1,27 @@
+<ActionBar class="actionBarContainer">
+    <ActionItem (tap)="changeMode()"
+    ios.systemIcon="16" ios.position="right"
+    [text]="mode"  android.position="popup">
+         <Switch checked="true"  style="background-color:black;" ></Switch>
+</ActionItem>
+    <Label text="Makaleler" class="actionLabel"></Label>
+  </ActionBar>
+
+  <ScrollView>
+    <GridLayout columns="*" rows="*" class="gridContainer" >
+      <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+        <StackLayout class="cardContent" shadow="5" height="100%">
+            <GridLayout>
+                <ListView [items]="first5Element">
+                    <ng-template let-item="item">
+                        <StackLayout style="border-width: 10px" >
+                            <Label textWrap="true" [nsRouterLink]="['/item',item.link]"  class="title" [text]="item.title"></Label>
+                            <Label textWrap="true"  [text]="item.description"></Label>
+                        </StackLayout>
+                    </ng-template>
+                </ListView>
+            </GridLayout>
+        </StackLayout>
+      </Card:CardView>
+    </GridLayout>
+</ScrollView>

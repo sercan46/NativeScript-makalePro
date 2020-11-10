@@ -1,0 +1,21 @@
+<ActionBar class="actionBarContainer">
+  <NavigationButton
+    text="Geri"
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()"
+  >
+  </NavigationButton>
+  <Label class="actionLabel" text="Makale İçerik"></Label>
+</ActionBar>
+
+<GridLayout row="1" rows="100, *" columns="*">
+  <WebView
+  id="webView"
+    row="3"
+    col="0"
+    colSpan="2"
+    (loadStarted)="onLoadStarted($event)"
+    (loadFinished)="onLoadFinished($event)"
+    src="{{ linkConvert }}"
+  ></WebView>
+</GridLayout>
