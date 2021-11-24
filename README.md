@@ -1,3 +1,7 @@
-# NativeScript-makalePro
-## Projenin Amacı
-NativeScript kullanarak geliştirmiş olduğum makale projem. Online bir json api kullanarak geliştirdiğim uygulama.
+# Makale Pro
+My project where articles are listed using NativeScript.
+
+## To start the project
+
+npm install
+ns run android
